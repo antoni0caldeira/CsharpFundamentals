@@ -6,14 +6,25 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            if (args.Length > 0)
+            int x = 3;
+            double soma = 0;
+
+            double[] numbers = new double[x];
+            x = 5;
+            numbers[0]=21.1;
+            numbers[1]=21.1;
+            numbers[2]=21.1;
+            for (int i = 0; i < numbers.Length; i++)
             {
-                Console.WriteLine($"{args[0]} you asshole");
+                Console.WriteLine(numbers[i]);
             }
-            else
+            foreach (var item in numbers)
             {
-                Console.WriteLine("Hello World!");
+                soma += item;
+                Console.WriteLine(soma);
             }
+            
+
         }
     }
 }
