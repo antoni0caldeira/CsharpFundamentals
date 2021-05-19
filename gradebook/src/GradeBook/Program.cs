@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace GradeBook
 {
@@ -6,24 +7,24 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            int x = 3;
             double soma = 0;
 
-            double[] numbers = new double[x];
-            x = 5;
-            numbers[0]=21.1;
-            numbers[1]=21.1;
-            numbers[2]=21.1;
-            for (int i = 0; i < numbers.Length; i++)
+            List<double>  grades = new List<double>();
+            grades.Add(21.1);
+            grades.Add(1.1);
+            grades.Add(211.1);
+            grades.Add(210.1);
+
+            for (int i = 0; i < grades.Count; i++)
             {
-                Console.WriteLine(numbers[i]);
+                Console.WriteLine(grades[i]);
             }
-            foreach (var item in numbers)
+            foreach (var item in grades)
             {
                 soma += item;
                 Console.WriteLine(soma);
             }
-            
+            System.Console.WriteLine($"Média:  {soma / grades.Count:N4}");
 
         }
     }
